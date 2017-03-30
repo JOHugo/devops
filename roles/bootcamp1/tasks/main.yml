@@ -1,0 +1,16 @@
+---
+# tasks file for roles/bootcamp1
+    - name: Find the hostname
+      debug:
+        var: ansible_hostname
+    - name: Find myIP
+      debug:
+        var: ansible_default_ipv4.address
+    - name: Copy my file
+      copy:
+        src: /Users/jhugo/Downloads/slyt441.pdf
+        dest: ./testfile.txt
+    - name: Put my text in a file
+      lineinfile:
+        dest: testfile.txt
+        line: "My text"
