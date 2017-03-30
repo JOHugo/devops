@@ -12,9 +12,9 @@
     - name: Copy my file
       copy:
         src: /Users/jhugo/Downloads/slyt441.pdf 
-        dest: .
+        dest: ./testfile.txt
     - name: Put my text in a file
       lineinfile:
-        dest: testfile 
+        dest: testfile.txt
         line: "My text"
 
